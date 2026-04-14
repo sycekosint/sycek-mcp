@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=70.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sycek-osint-mcp"
+version = "0.1.0"
+description = "MCP server — connect Claude Desktop to Sycek OSINT breach, X/Twitter, and social intelligence tools"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [
+    { name = "Sycek OSINT", email = "support@sycek.io" }
+]
+keywords = ["mcp", "osint", "breach", "threat-intelligence", "twitter", "claude"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Internet :: WWW/HTTP",
+]
+dependencies = [
+    "mcp[cli]>=1.0.0",
+    "httpx>=0.27.0",
+    "uvicorn>=0.30.0",
+]
+
+[project.urls]
+Homepage = "https://sycek.io"
+Documentation = "https://sycek.io/api-docs"
+Repository = "https://github.com/sycekosint/mcp"
+"Bug Tracker" = "https://github.com/sycekosint/mcp/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "respx>=0.21",
+    "build>=1.0",
+    "twine>=5.0",
+]
+
+[project.scripts]
+sycek-osint-mcp = "sycek_osint_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sycek_osint_mcp*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"

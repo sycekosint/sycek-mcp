@@ -1,0 +1,2 @@
+[console_scripts]
+sycek-osint-mcp = sycek_osint_mcp.server:main
