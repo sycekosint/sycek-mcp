@@ -204,7 +204,6 @@ Credits never expire. Top up anytime at [sycek.io/app/subscription](https://syce
 - **Platform:** [sycek.io](https://sycek.io)
 - **API Documentation:** [sycek.io/api-docs](https://sycek.io/api-docs)
 - **Developer Portal:** [sycek.io/app/developer](https://sycek.io/app/developer)
-- **PyPI:** [pypi.org/project/sycek-osint-mcp](https://pypi.org/project/sycek-osint-mcp)
 - **Issues:** [github.com/sycekosint/mcp/issues](https://github.com/sycekosint/mcp/issues)
 
 ---
